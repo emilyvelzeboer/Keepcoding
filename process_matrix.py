@@ -12,10 +12,7 @@ A que sirve?
 El proceso de transformar cada punto en el promedio de sus vecinos es un filtro de imágenes muy común. La gran diferencia está en el tamaño de las imágenes, representadas como matrices de píxeles (3 números que representan los componentes rojo, verde y azul), son mucho mayores que las que hemos visto aquí.
 Al ir promediando los valores, lo que hacemos es eliminar detalles y bordes, es decir, difuminamos la imágen. Has creado un filtro para eliminar poros abiertos, arrugas y patas de gallo en el instagram.
 Si en vez de procesar cada elemento, lo hubiésemos hecho por bloques, en vez de suavizar, estaríamos pixelando la imagen. Si además, solo lo aplicas a un rango de índices (en vez de toda la matriz), habríamos pixelado una parte de la imagen, como la cara.
-
 """
-
-
 
 from functools import reduce
 
