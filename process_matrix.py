@@ -1,3 +1,22 @@
+"""
+Que hace process_matrix.py?
+
+process_matrix recibe como parámetro una matriz (lista de listas) de números y devuelve otra, con el mismo tamaño y número de elementos.
+process_matrix transforma los elementos de la matriz original.
+La transformación que aplica es la siguiente: cada elemento de la matriz pasa a tener como valor el promedio de su valor antiguo y los valores de sus vecinos.
+- Los elementos que están en el interior, tienen 4 vecinos
+- Los elementos que se encuentran en el borde, tienen 3 vecinos
+- Los elementos que se encuentran en las esquinas, tienen 2 vecinos
+
+A que sirve?
+El proceso de transformar cada punto en el promedio de sus vecinos es un filtro de imágenes muy común. La gran diferencia está en el tamaño de las imágenes, representadas como matrices de píxeles (3 números que representan los componentes rojo, verde y azul), son mucho mayores que las que hemos visto aquí.
+Al ir promediando los valores, lo que hacemos es eliminar detalles y bordes, es decir, difuminamos la imágen. Has creado un filtro para eliminar poros abiertos, arrugas y patas de gallo en el instagram.
+Si en vez de procesar cada elemento, lo hubiésemos hecho por bloques, en vez de suavizar, estaríamos pixelando la imagen. Si además, solo lo aplicas a un rango de índices (en vez de toda la matriz), habríamos pixelado una parte de la imagen, como la cara.
+
+"""
+
+
+
 from functools import reduce
 
 def process_matrix(list_of_lists):
